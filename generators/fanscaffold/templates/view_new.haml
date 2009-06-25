@@ -1,8 +1,8 @@
 %h1
-	New <%= singular_name %>
+  New <%= singular_name %>
 
--form_for(@<%= singular_name %>) do |f|
-	= f.error_messages
-	= render :partial => 'form', :locals => {:f => f, :button => 'Create'}
+-form_for("@" + singular_name) do |f|
+  = f.error_messages
+  = render :partial => 'form', :locals => {:f => f, :button => 'Create'}
 
-= link_to 'Back', <%= plural_name %>_path
+= link_to 'Back', plural_name + "_path"
