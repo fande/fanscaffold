@@ -1,7 +1,7 @@
 %h1
   New <%= singular_name %>
 
--form_for(@ <%= singular_name %>) do |f|
+-form_for(@<%= singular_name %>) do |f|
   = f.error_messages
   = render :partial => 'form', :locals => {:f => f, :button => 'Create'}
 
