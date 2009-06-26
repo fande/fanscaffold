@@ -1,9 +1,9 @@
 <% for attribute in attributes %>
-%p
+.form_item
 	= f.label :<%= attribute.name %>
 	%br
 	= f.<%= attribute.field_type %> :<%= attribute.name %>
 <% end %>
 
-%p
+.form_item
 	= f.submit button
