@@ -1,5 +1,22 @@
 %h1
   Listing <%= plural_name %>
 
+.grid_12.heading.alpha
+<% attributes.each_with_index do |index, attribute| %>
+  <% if attribute == 0 %>
+  .grid_2.alpha
+    <%= index.column.human_name %>
+  <% else %>
+  .grid_2
+    <%= index.column.human_name %>
+  <% end %>
+<% end %>
+  .grid_2.omega
+    actions
 
+
+%br
+= render :partial => 'list'
+
+%br
 = link_to "New <%= singular_name %>", new_<%= singular_name %>_path

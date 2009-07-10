@@ -1,0 +1,15 @@
+.grid_2.alpha
+  - @<%= plural_name %>.each do |<%= singular_name %>|
+<% attributes.each_with_index do |index, attribute| %>
+<% if attribute == 0 %>
+    .grid_2.alpha
+      = <%= singular_name %>.<%= index.name %>
+<% else %>
+    .grid_2
+      = <%= singular_name %>.<%= index.name %>
+<% end %>
+<% end %>
+    .grid_2.omega
+      = link_to 'Show', <%= singular_name %> 
+      = link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>)
+      = link_to_remote 'Destroy', :url => <%= singular_name %>_path(<%= singular_name %>), :confirm => 'Are you sure?', :method => :delete

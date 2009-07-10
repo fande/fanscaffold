@@ -51,7 +51,7 @@ class FanscaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('public/stylesheets/sass', class_path))
 
 	def fanscaffold_views
-      %w[ index show new edit _form ]
+      %w[ index show new edit _form _list destroy]
     end
 
       for action in fanscaffold_views
